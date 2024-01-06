@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Todo {% endblock %}
+
+{% block content %}
+    
+    {% for i in todo %}
+        <!-- <h3> {{i.title|capfirst}} </h3>
+        <p> {{i.description}} </p>
+        <small> {{i.date}} </small> -->
+        
+        <a href="/todo/detail/{{ i.id }}">
+
+            <h3> {{i.title|capfirst}} </h3>
+
+        </a>
+
+        <hr>
+    {% endfor %}
+    
+{% endblock %}
