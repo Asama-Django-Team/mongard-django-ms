@@ -3,16 +3,27 @@
 {% block content %}
 
     <h1>
-        {{ item.title }}
+        {{ todo_item.title }}
     </h1>
 
     <p>
-        {{ item.description }}
+        {{ todo_item.description }}
     </p>
     
     <small>
-        {{ item.date }}
+        {{ todo_item.date }}
     </small>
+
+    <br>
+    <br>
+
+    <a href="{% url 'delete' todo_item.id %}" class="btn btn-danger">
+        Delete
+    </a>
+
+    <a href="{% url 'update' todo_item.id %}" class="btn btn-info">
+        Update
+    </a>
 
 
 {% endblock %}

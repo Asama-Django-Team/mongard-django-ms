@@ -9,7 +9,7 @@
         <p> {{i.description}} </p>
         <small> {{i.date}} </small> -->
         
-        <a href="/todo/detail/{{ i.id }}">
+        <a href="{% url 'details' i.id %}">
 
             <h3> {{i.title|capfirst}} </h3>
 
