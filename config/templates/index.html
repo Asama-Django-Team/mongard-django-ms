@@ -4,6 +4,8 @@
 
 {% block content %}
 
+    <a href="{% url 'todo' %}" class="btn btn-info"> TODO </a>
+
     {% if name == "sina" %}
         <h3> not found {{name|capfirst}} </h3>
     {% else %}
